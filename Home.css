@@ -1,0 +1,70 @@
+header {
+	float: center;
+	margin: auto;
+  	width: 100%;
+  	size: 20px;
+	text-align: center;
+	background-color: #ffa700;
+	font-family: 'Montserrat';
+}
+
+header img {
+	max-width: 10%;
+}
+
+#task {
+	float: center;
+}
+
+#pic_quiz img {
+	/*float: center;
+	margin: 100px;*/
+	display: block;
+}
+
+/*
+#pic_quiz {
+	background-color: blue;
+}
+*/
+
+#healthy {
+	float: left;
+    max-width: 80%;
+    margin: -100px 150px 20px 30px;
+    padding: 0 30px 0 0;
+}
+
+#unhealthy {
+    float: right;
+    max-width: 40%;
+    margin: -100px 0 0 0;
+}
+
+#motivation {
+	margin: 200px 0 200px 620px;
+    font-family: 'Oswald', sans-serif;
+}
+
+#or {
+    float: center;
+    margin: 150px 0 0 25px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+}
+
+#instagram {
+    max-width: 100px;
+}
+
+#facebook {
+    max-width: 93px;
+}
+
+footer {
+    margin: -140px 0 10px 590px;
+}
+
+#connect {
+    margin: 0 0 0 40px;
+}
