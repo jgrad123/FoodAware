@@ -36,14 +36,14 @@
     <nav>
    <ul>
        
-         <a href="file:///Users/nfte/FoodAware/FoodAware-Phonegap/www/home.html" class="btn btn-info btn-lg">
+         <a href="#" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-home"></span> Home
              
              
        <a href="#" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-user"></span> Profile
            
-     <a href="file:///Users/nfte/FoodAware/FoodAware-Phonegap/www/foodfinder.html" class="btn btn-info btn-lg" class="btn btn-info btn-lg">
+     <a href="#" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-search"></span> Food Finder
 
          <a href="#" class="btn btn-info btn-lg">
@@ -102,8 +102,8 @@
                     var infowindow = new google.maps.InfoWindow({
                         map: map,
                         position: pos,
-                        content: 'Your Location!'
                     });
+                    infowindow.close();
 
                     map.setCenter(pos);
                     
@@ -111,8 +111,8 @@
             var request = {
                 location: pos,
                 position:pos,
-                radius: '1000',
-                name: ['healthy']
+                radius: '10000',
+                name: ['healthy', 'food']
             }
 
                 var service = new google.maps.places.PlacesService(map);
@@ -125,6 +125,18 @@
                             createMarker(results[i]);
                         }
                     }
+                    var marker = new google.maps.Marker({
+                    location: pos,
+                    map: map,
+                    title: "You're here",
+                    position:pos
+                });
+                marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
+ 
+                google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent("You are here");
+                infowindow.open(map, this);
+                });
                 }
 
                 function createMarker(place) {
@@ -133,13 +145,13 @@
                         map: map,
                         position: place.geometry.location
                     });
+                    google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent(place.name);
+                    infowindow.open(map, this);
+                    });
                 }
 
-                var marker = new google.maps.Marker({
-                    location: pos,
-                    map: map,
-                    title: "You're here"
-                });
+                
 
 
                 }, function() {
