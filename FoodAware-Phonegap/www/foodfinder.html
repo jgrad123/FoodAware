@@ -146,7 +146,7 @@
                         position: place.geometry.location
                     });
                     google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.setContent(place.name);
+                    infowindow.setContent(place.name + "<br>" + place.vicinity);
                     infowindow.open(map, this);
                     });
                 }
