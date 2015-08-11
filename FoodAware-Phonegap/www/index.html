@@ -38,6 +38,7 @@
               a.innerHTML += "<img src='"+ entry.mediaGroups[0].contents[0].url +"'/>";
             a.appendChild(document.createTextNode(entry.title));
             a.href = entry.link;
+              a.target = "_blank";
             
             container.appendChild(a);
             container.innerHTML += '</br>';
