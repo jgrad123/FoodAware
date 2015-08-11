@@ -1,3 +1,6 @@
+<html>
+<body>
+
 <?php
 
 require("dbc.php");
@@ -45,4 +48,5 @@ else
 ?>
 
 
-    
+    </body>
+</html>

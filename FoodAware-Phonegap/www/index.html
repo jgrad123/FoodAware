@@ -7,30 +7,67 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/Navcss.css"
+    <link rel="stylesheet" href="css/Navcss.css">
+    
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="cs/style.css">
+    
+    <style>
+    #feed{
+    width: 50%;
+    margin: 0 auto;  
+    }
+    
+    
+    </style>
+    <script type="text/javascript">
+
+    google.load("feeds", "1");
+
+    function initialize() {
+      var feed = new google.feeds.Feed("http://www.health.com/health/food-recipes/feed");
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+          container.innerHTML += "<center><b>My Healthy RSS Feed</b></br></center>";
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            var a = document.createElement("a");
+              a.innerHTML += "<img src='"+ entry.mediaGroups[0].contents[0].url +"'/>";
+            a.appendChild(document.createTextNode(entry.title));
+            a.href = entry.link;
+            
+            container.appendChild(a);
+            container.innerHTML += '</br>';
+          }
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+
+    </script>
 </head>
     <body>
-    <header>
-    
-    
-    
-    </header>
+        <header></header>
+        
    
         <center><img id="logo-main" src ="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/11752629_393133044210940_5735073096513004077_n.jpg?oh=95e5e29f408a73c7cecd26e10bb67d80&oe=56459C38"></img></center>
     <nav>
    <ul>
        
-         <a href="#" class="btn btn-info btn-lg">
+         <a href="home.html" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-home"></span> Home
              
              
-       <a href="#" class="btn btn-info btn-lg">
+       <a href="profile.html" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-user"></span> Profile
            
      <a href="foodfinder.html" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-search"></span> Food Finder
 
-         <a href="#" class="btn btn-info btn-lg">
+         <a href="quiz.html" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-pencil"></span> Food Quiz
         </a>
                 
@@ -40,6 +77,8 @@
         </ul>
     
     </nav>
+             
+             <div id="feed"></div>
 </body>    
     
 
