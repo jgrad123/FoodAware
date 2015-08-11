@@ -46,6 +46,37 @@ nav ul li:hover
     padding: 20px;
     
 }
+#container
+{
+    position: relative;
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+    background-color: #CCC;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom:10px;
+    text-align: center;
+}
 
+#profilePicture
+{
+    float: left;
+    background-color: #00F;
+    margin-left: 50px;
+    width:350px;
+}
+#aboutMe
+{
+    float: right;
+    background-color: #F00;
+    margin-right: 10px;
+    width: 400px
+
+#next
+{
+    clear: both;
+    
+}
 
 

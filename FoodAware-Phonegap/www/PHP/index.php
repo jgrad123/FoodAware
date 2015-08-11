@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -30,7 +34,7 @@
 <body>
 <div id="container">
         <?php
-if(!isset($_SESSION['id']))
+if(!isset($_SESSION['username']))
     { 
          ?>
 
@@ -47,7 +51,7 @@ if(!isset($_SESSION['id']))
 }
 ?>
    
-    <?php if(isset($_SESSION['id'])){ ?>
+    <?php if(isset($_SESSION['username'])){ ?>
     {first Name} {Last Name's} Profile
 <div id="wrapper">
    
