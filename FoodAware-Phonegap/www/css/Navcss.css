@@ -51,19 +51,30 @@ nav ul li
 
 }
 
+#contactform{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 nav ul li:hover
 {
     background-color:brown;
     padding: 20px;
     
 }
+
+.col-md-6{
+
+	background-color:#ccc;
+}
+
 #container
 {
     position: relative;
     width: 1000px;
     left: 50%;
     margin-left: -500px;
-    background-color: #CCC;
     border-radius: 20px;
     padding-top: 10px;
     padding-bottom:10px;
