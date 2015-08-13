@@ -1,0 +1,4 @@
+takeaways:
+- design with mobile, responsive web approach 
+- working with drupal form, pcs routing via form
+- sticking with embedded window for chat interface
