@@ -23,7 +23,20 @@
     
     </style>
     <script type="text/javascript">
+	$(function() {
 
+			$("#feed > div:gt(0)").hide();
+
+			setInterval(function() {
+			  $('#feed > div:first')
+			    .hide()
+			    .next()
+			    .fadeIn(1000)
+			    .end()
+			    .appendTo('#feed');
+			},  7500);
+
+		});
     google.load("feeds", "1");
 
     function initialize() {
@@ -34,14 +47,15 @@
           container.innerHTML += "<center><b>My Healthy RSS Feed</b></br></center>";
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
-            var a = document.createElement("a");
+            var a = document.createElement("div");
               a.innerHTML += "<img src='"+ entry.mediaGroups[0].contents[0].url +"'/>";
-            a.appendChild(document.createTextNode(entry.title));
-            a.href = entry.link;
-              a.target = "_blank";
-            
+			  var b = document.createElement("a");
+            b.appendChild(document.createTextNode(entry.title));
+            b.href = entry.link;
+              b.target = "_blank";
+            $(a).hide();
             container.appendChild(a);
-            container.innerHTML += '</br>';
+			a.appendChild(b);
           }
         }
       });
