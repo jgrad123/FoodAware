@@ -47,3 +47,8 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+$(document).hover(function() {
+    $("#navBar").fadeOut("fast", function() {
+    });
+});
