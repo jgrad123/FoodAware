@@ -48,7 +48,8 @@ var app = {
     }
 };
 
-$(document).hover(function() {
-    $("#navBar").fadeOut("fast", function() {
+$(document).ready(function() {
+    $(".btn btn-info btn-lg").hover(function() {
+        $(".btn btn-info btn-lg").fadeOut("fast");
     });
 });
