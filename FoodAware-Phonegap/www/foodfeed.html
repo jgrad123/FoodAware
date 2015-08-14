@@ -13,15 +13,7 @@
     
     <script type="text/javascript" src="js/script.js"></script>
     <link rel="cs/style.css">
-    
-    <style>
-    #feed{
-    width: 50%;
-    margin: 0 auto;  
-    }
-    
-    
-    </style>
+  
     <script type="text/javascript">
 	$(function() {
 
@@ -44,16 +36,17 @@
       feed.load(function(result) {
         if (!result.error) {
           var container = document.getElementById("feed");
-          container.innerHTML += "<center><b>My Healthy RSS Feed</b></br></center>";
+          container.innerHTML += "<center><b>My Healthy RSS Feed</b></br></br></center>";
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
             var a = document.createElement("div");
-              a.innerHTML += "<img src='"+ entry.mediaGroups[0].contents[0].url +"'/>";
+              a.innerHTML += "<center><img src='"+ entry.mediaGroups[0].contents[0].url +"'/></center>";
 			  var b = document.createElement("a");
             b.appendChild(document.createTextNode(entry.title));
+			b.innerHTML = "<center>" + b.innerHTML + "</center>";
             b.href = entry.link;
               b.target = "_blank";
-            $(a).hide();
+            if(i != 0)$(a).hide();
             container.appendChild(a);
 			a.appendChild(b);
           }
