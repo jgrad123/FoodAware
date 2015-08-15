@@ -48,8 +48,6 @@ var app = {
     }
 };
 
-$(document).ready(function() {
-    $(".btn btn-info btn-lg").hover(function() {
-        $(".btn btn-info btn-lg").fadeOut("fast");
-    });
+$("#home").hover(function() {
+    $("#home").fadeOut("fast");
 });
