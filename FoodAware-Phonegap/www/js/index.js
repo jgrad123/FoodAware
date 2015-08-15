@@ -47,7 +47,3 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
-$("#home").hover(function() {
-    $("#home").fadeOut("fast");
-});
