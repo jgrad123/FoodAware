@@ -5,11 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Profile Page</title>
-
-
-
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/Navcss.css">
@@ -30,20 +25,20 @@
 		
 		function parseSignUp(){
 		var user = new Parse.User();
-user.set("username", $("#usernamesign").val());
-user.set("password", $("#passwordsign").val());
-user.set("email", $("#emailAddrsign").val());
+        user.set("username", $("#usernamesign").val());
+        user.set("password", $("#passwordsign").val());
+        user.set("email", $("#emailAddrsign").val());
 
 
-user.signUp(null, {
-  success: function(user) {
-    alert("Contrats you are now a user, "+$("#usernamesign").val() + "!");
-  },
-  error: function(user, error) {
-    // Show the error message somewhere and let the user try again.
-    alert("Error: " + error.code + " " + error.message);
-  }
-});
+        user.signUp(null, {
+            success: function(user) {
+                alert("Contrats you are now a user, "+$("#usernamesign").val() + "!");
+        },
+        error: function(user, error) {
+            // Show the error message somewhere and let the user try again.
+            alert("Error: " + error.code + " " + error.message);
+            }
+        });
 		
 		}
     </script>
@@ -51,34 +46,28 @@ user.signUp(null, {
 
 <body>
 
-
-
     <header>
         <ul>
 
-
             <a href="index.html" class="btn btn-info btn-lg">
                 <span class="glyphicon glyphicon-home"></span> Home
+                
+            <a href="foodprofile.html" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-user"></span> Profile
 
+            <a href="foodfinder.html" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-search"></span> Food Finder
 
-                <a href="foodprofile.html" class="btn btn-info btn-lg">
-                    <span class="glyphicon glyphicon-user"></span> Profile
+            <a href="foodquiz.html" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-pencil"></span> Food Quiz
 
-                    <a href="foodfinder.html" class="btn btn-info btn-lg">
-                        <span class="glyphicon glyphicon-search"></span> Food Finder
+            <a href="foodfeed.html" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-th-list"></span> Food Feed
 
-                        <a href="foodquiz.html" class="btn btn-info btn-lg">
-                            <span class="glyphicon glyphicon-pencil"></span> Food Quiz
-
-                            <a href="foodfeed.html" class="btn btn-info btn-lg">
-                                <span class="glyphicon glyphicon-th-list"></span> Food Feed
-
-
-                            </a>
+            </a>
         </ul>
     </header>
     
-
         <div id="contactform">
 		<center><img id="logo-main" src="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/11752629_393133044210940_5735073096513004077_n.jpg?oh=95e5e29f408a73c7cecd26e10bb67d80&oe=56459C38"></img>
     </center>
@@ -87,7 +76,7 @@ user.signUp(null, {
 	<center><span ><b>LOG IN </b></span></center>
             <label class="label label-default">Username</label>
             <input type="text" class="form-control" id="username" maxlength="128" placeholder="Enter Your Username">
-            <br /> <label class="label label-default">Passsword</label>
+            <br /> <label class="label label-default">Password</label>
             <input type="password" class="form-control" id="password" maxlength="128" placeholder="Enter Your Password">
             <br />
             <button class="btn btn-default" onclick="parseLogin()">Login</button>
@@ -96,7 +85,7 @@ user.signUp(null, {
 		<center><span ><b>SIGN UP </b></span></center>
             <label class="label label-default">Username</label>
             <input type="text" class="form-control" id="usernamesign" maxlength="128" placeholder="Enter Your Username">
-            <br /> <label class="label label-default">Passsword</label>
+            <br /> <label class="label label-default">Password</label>
             <input type="password" class="form-control" id="passwordsign" maxlength="128" placeholder="Enter Your Password">
             <br />
 			<label class="label label-default">Email Address</label>
@@ -108,8 +97,6 @@ user.signUp(null, {
 		</div>
 	</div>
         
-
-
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

@@ -13,12 +13,9 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
-
 </head>
 
 <body>
-   
-  
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -28,40 +25,28 @@
     <body>
     <header>
 		   <ul>
-       
-     
-         <a href="index.html" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-home"></span> Home
+                <a href="index.html" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-home"></span> Home
              
-             
-       <a href="foodprofile.html" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-user"></span> Profile
+                <a href="foodprofile.html" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-user"></span> Profile
            
-     <a href="foodfinder.html" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-search"></span> Food Finder
+                <a href="foodfinder.html" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-search"></span> Food Finder
 
-         <a href="foodquiz.html" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-pencil"></span> Food Quiz
+                <a href="foodquiz.html" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-pencil"></span> Food Quiz
              
                 <a href="foodfeed.html" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-th-list"></span> Food Feed
+                    <span class="glyphicon glyphicon-th-list"></span> Food Feed
         
- 
-        </a>
-        </ul>
-		</header>
+                </a>
+            </ul>
+    </header>
    
-        <center><img id="logo-main" src ="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/11752629_393133044210940_5735073096513004077_n.jpg?oh=95e5e29f408a73c7cecd26e10bb67d80&oe=56459C38"></img></center>
+    <center><img id="logo-main" src ="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/11752629_393133044210940_5735073096513004077_n.jpg?oh=95e5e29f408a73c7cecd26e10bb67d80&oe=56459C38"></img></center>
    
 </body>    
-    
-    
-    
-    
-    
-    
-    
-    
     <!--
             MADE WITH <3 AND JAVASCRIPT
         -->
@@ -76,18 +61,13 @@
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-
-    </script>
-
     <script>
         var map;
-
         function initialize() {
             var mapOptions = {
                 zoom: 14
             };
             /*    
-            
 };*/
             map = new google.maps.Map(document.getElementById('map-canvas'),
                 mapOptions);
@@ -105,7 +85,6 @@
                     infowindow.close();
 
                     map.setCenter(pos);
-                    
                     
             var request = {
                 location: pos,
@@ -150,9 +129,6 @@
                     });
                 }
 
-                
-
-
                 }, function() {
                     handleNoGeolocation(true);
                 });
@@ -190,5 +166,4 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804" width="600" height="450" frameborder="0" style="border:5"></iframe>
         </div>
     </body>
-
 </html>
