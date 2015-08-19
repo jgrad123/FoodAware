@@ -1,0 +1,101 @@
+body
+{
+margin:0;
+padding:0;
+font-family:sans-serif;
+}
+
+header
+{
+background:#FF9900;
+padding:40px 0;
+text-align:center;
+color: white;
+
+    
+}
+
+#feed {
+		    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+		}
+
+		#feed > div {
+		    position: relative;
+		}
+
+
+nav ul 
+{
+  background-color: white;
+  overflow:hidden;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  
+}
+
+a
+{
+    text-decoration:none;
+    color: black;
+}
+
+nav ul li 
+{
+    padding:10px;
+    display:inline-block;
+
+}
+
+#contactform{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+nav ul li:hover
+{
+    background-color:brown;
+    padding: 20px;
+    
+}
+
+.col-md-6{
+
+	background-color:#ccc;
+}
+
+#container
+{
+    position: relative;
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom:10px;
+    text-align: center;
+}
+
+#profilePicture
+{
+    float: left;
+    background-color: #00F;
+    margin-left: 50px;
+    width:350px;
+}
+#aboutMe
+{
+    float: right;
+    background-color: #F00;
+    margin-right: 10px;
+    width: 400px
+
+#next
+{
+    clear: both;
+    
+}
+
+
