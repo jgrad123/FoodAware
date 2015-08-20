@@ -13,6 +13,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+	<script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
 </head>
 
 <body>
@@ -62,6 +63,22 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script>
+		Parse.initialize("jJo2iNOzfhTjx2gMGx5uEtTTKHfkTi7EsbPSWD8L", "nEYhgXGufiZSMXA0LwCeV2IcFhg0saTYPTlshkf4");
+		var HealthyAddress = Parse.Object.extend("HealthyAddress");
+		var queryObj = new Parse.Query(HealthyAddress);
+		var addList = [];
+		queryObj.find({
+		success: function (results) {
+			for (var i = 0; i < results.length; i++) {
+				addList.push(results[i]);
+			}
+		},
+		error: function (error) {
+			alert("Error: " + error.code + " " + error.message);
+		}});
+		
+		
+	
         var map;
         function initialize() {
             var mapOptions = {
@@ -78,46 +95,61 @@
                     var pos = new google.maps.LatLng(position.coords.latitude,
                         position.coords.longitude);
 
-                    var infowindow = new google.maps.InfoWindow({
+                    infowindow = new google.maps.InfoWindow({
                         map: map,
                         position: pos,
                     });
                     infowindow.close();
 
                     map.setCenter(pos);
-                    
-            var request = {
-                location: pos,
-                position:pos,
-                radius: '10000',
-                name: ['healthy', 'food']
-            }
-
-                var service = new google.maps.places.PlacesService(map);
-                service.search(request, callback);
-
-                function callback(results, status) {
-                    if (status == google.maps.places.PlacesServiceStatus.OK) {
-                        for (var i = 0; i < results.length; i++) {
-                            var place = results[i];
-                            createMarker(results[i]);
-                        }
-                    }
                     var marker = new google.maps.Marker({
                     location: pos,
                     map: map,
                     title: "You're here",
-                    position:pos
-                });
-                marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
+                    position:pos,
+					});
+					
+					marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
  
                 google.maps.event.addListener(marker, 'click', function() {
                 infowindow.setContent("You are here");
                 infowindow.open(map, this);
                 });
-                }
+
+                        for (var i = 0; i < addList.length; i++) {
+                            
+                            createMarker(addList[i]);
+                        }
+                    
+                });
+               
 
                 function createMarker(place) {
+					var address = place.get("Location");
+					
+					var geocoder = new google.maps.Geocoder();
+					 geocoder.geocode({'address': address}, function(results, status) {
+						if (status === google.maps.GeocoderStatus.OK) {
+						var pos = results[0].geometry.location;
+						  map.setCenter(results[0].geometry.location);
+						  var marker = new google.maps.Marker({
+							map: map,
+							position: pos
+						  });
+						  google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.close();
+						  infowindow = new google.maps.InfoWindow({
+								map: map,
+								position: pos,
+							});
+						infowindow.setContent("<center>" + place.get("Name") + "</center><br><b>" + place.get("Location") + "</b><br><b>Borough: </b>" + place.get("Borough") + "<br><b>Storefront: </b>" + place.get("Type") + "<br><b>Dates Open: </b>" + place.get("Dates") + "<br><b>Payment Methods: </b>" + place.get("Payment") + "<br><a style='cursor:pointer;'>Check In</a>" );
+						infowindow.open(map, this);
+						});
+						} else {
+						  console.log('Geocode was not successful for the following reason: ' + status);
+						}
+					  });
+					/*
                     var placeLoc = place.geometry.location;
                     var marker = new google.maps.Marker({
                         map: map,
@@ -126,12 +158,10 @@
                     google.maps.event.addListener(marker, 'click', function() {
                     infowindow.setContent(place.name + "<br>" + place.vicinity);
                     infowindow.open(map, this);
-                    });
+                    });*/
                 }
 
-                }, function() {
-                    handleNoGeolocation(true);
-                });
+                
             } else {
                 // Browser doesn't support Geolocation
                 handleNoGeolocation(false);
