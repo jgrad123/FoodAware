@@ -95,7 +95,7 @@
                     var pos = new google.maps.LatLng(position.coords.latitude,
                         position.coords.longitude);
 
-                    var infowindow = new google.maps.InfoWindow({
+                    infowindow = new google.maps.InfoWindow({
                         map: map,
                         position: pos,
                     });
@@ -137,11 +137,12 @@
 							position: pos
 						  });
 						  google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.close();
 						  infowindow = new google.maps.InfoWindow({
 								map: map,
 								position: pos,
 							});
-						infowindow.setContent(place.get("Name") + "<br>" + place.get("Location"));
+						infowindow.setContent("<center>" + place.get("Name") + "</center><br><b>" + place.get("Location") + "</b><br><b>Borough: </b>" + place.get("Borough") + "<br><b>Storefront: </b>" + place.get("Type") + "<br><b>Dates Open: </b>" + place.get("Dates") + "<br><b>Payment Methods: </b>" + place.get("Payment") + "<br><a style='cursor:pointer;'>Check In</a>" );
 						infowindow.open(map, this);
 						});
 						} else {
