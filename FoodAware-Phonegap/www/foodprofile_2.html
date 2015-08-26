@@ -20,10 +20,12 @@
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-         <script src="https://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
-        <script>
+    <script src="https://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+   
+    <link rel="stylesheet" href="css/Navcss.css">
+    <script src="https://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+    <script>
         Parse.initialize("jJo2iNOzfhTjx2gMGx5uEtTTKHfkTi7EsbPSWD8L", "nEYhgXGufiZSMXA0LwCeV2IcFhg0saTYPTlshkf4");
-
 
         function parseLogin() {
             Parse.User.logIn($("#username").val(), $("#password").val(), {
@@ -54,8 +56,7 @@
         });
 		
 		}
-        </script>            
-            
+    </script>
             
         <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="demo.css" />
@@ -108,19 +109,16 @@
                             <form > 
                                 <h1>Log in</h1> 
                                 <p> 
-                                    <label for="username" class="uname" data-icon="u" > Your email or username </label>
-                                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                    <label for="username" class="uname"  Your email or username </label>
+                                    <input class="form-control" id="username" type="text" placeholder="Enter Your Username"/>
                                 </p>
                                 <p> 
                                     <label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                                    <input class="form-control" id="password" type="password"  placeholder="Enter Your Password"/> 
                                 </p>
-                                <p class="keeplogin"> 
-									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
-									<label for="loginkeeping">Keep me logged in</label>
-								</p>
-                                <p class="login button"> 
-                                    <input type="submit" value="Login" id="loginbutton"/> 
+                        
+                                <p> 
+                                    <button class="btn btn-defualt" id="loginbutton"  onclick="parseLogin()">Login</button> 
 								</p>
                                 <p class="change_link">
 									Not a member yet ?
@@ -130,30 +128,28 @@
                         </div>
 
                         <div id="register" class="animate form">
-                            <form  action="mysuperscript.php" autocomplete="on"> 
+                            <form  autocomplete="on"> 
                                 <h1> Sign up </h1> 
                                 <p> 
-                                    <label for="usernamesign" class="uname" data-icon="u">Your username</label>
-                                    <input id="usernamesign" name="usernamesign" required="required" type="text" placeholder="mysuperusername690" />
+                                    <label for="usernamesign" class="uname">Your username</label>
+                                    <input id="usernamesign" class="form-control" type="text"  placeholder="Enter Your Username">
                                 </p>
                                 <p> 
-                                    <label for="emailAddrsign" class="youmail" data-icon="e" > Your email</label>
-                                    <input id="emailAddrsign" name="emailAddrsign" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                                    <label for="emailAddrsign" class="youmail"> Your email</label>
+                                    <input id="emailAddrsign" class="form-control"  type="email" placeholder="Enter Your email"/> 
                                 </p>
                                 <p> 
-                                    <label for="passwordsign" class="youpasswd" data-icon="p">Your password </label>
-                                    <input id="passwordsign" name="passwordsign" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                    <label for="passwordsign" class="youpasswd">Your password </label>
+                                    <input id="passwordsign" class="form-control" type="password" placeholder="Enter Your Password"/>
                                 </p>
+                              
                                 <p> 
-                                    <label for="passwordsign_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                                    <input id="passwordsign_confirm" name="passwordsign_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
-                                </p>
-                                <p class="signin button"> 
-									<input type="submit" value="Sign up" id="signupbutton"/> 
+                                    <button class="btn btn-default" id="signupbutton" onclick="parseSignUp();">Login</button> 
 								</p>
-                                <p class="change_link">  
-									Already a member ?
-									<a href="#tologin" class="to_register"> Go and log in </a>
+                                 <p class="change_link">
+									Already a memeber ?
+									<a href="#tologin" class="to_register">Go and Log in</a>
+								</p>
 								</p>
                             </form>
                         </div>
