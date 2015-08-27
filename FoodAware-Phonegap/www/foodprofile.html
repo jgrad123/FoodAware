@@ -66,28 +66,29 @@
     </head>
  
         <header>
-		   <ul>
+            <center><img id="logo-main" src ="icon.png"></img></center>
+            <ul>
        
-             <a href="index.html" class="btn btn-info btn-lg">
-              <span class="glyphicon glyphicon-home"></span> Home
+                 <a href="index.html" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-home"></span> Home
+                 </a>
 
-             <a href="foodprofile.html" class="btn btn-info btn-lg">
-              <span class="glyphicon glyphicon-user"></span> Profile
+                 <a href="foodprofile.html" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-user"></span> Profile
+                 </a>
 
-             <a href="foodfinder.html" class="btn btn-info btn-lg">
-              <span class="glyphicon glyphicon-search"></span> Food Finder
-
-             <a href="foodquiz.html" class="btn btn-info btn-lg">
-              <span class="glyphicon glyphicon-pencil"></span> Food Quiz
-
-             <a href="foodfeed.html" class="btn btn-info btn-lg">
-              <span class="glyphicon glyphicon-th-list"></span> Food Feed
-        
-             </a>
+                 <a href="foodfinder.html" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-search"></span> Food Finder
+                 </a>
+                     
+                 <a href="foodquiz.html" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-pencil"></span> Food Quiz
+                 </a>
+                 <a href="foodfeed.html" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-th-list"></span> Food Feed
+                 </a>
            </ul>
 		</header>
-        <center><img id="logo-main" src ="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/11752629_393133044210940_5735073096513004077_n.jpg?oh=95e5e29f408a73c7cecd26e10bb67d80&oe=56459C38"></img></center>
-
     <body>
         <div class="container">
             <!-- Codrops top bar -->
@@ -105,26 +106,28 @@
                     <a class="hiddenanchor" id="toregister"></a>
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
-                        <div id="login" class="animate form">
-                            <form > 
-                                <h1>Log in</h1> 
-                                <p> 
-                                    <label for="username" class="uname"  Your email or username </label>
-                                    <input class="form-control" id="username" type="text" placeholder="Enter Your Username"/>
-                                </p>
-                                <p> 
-                                    <label for="password" class="youpasswd"> Your password </label>
-                                    <input class="form-control" id="password" type="password"  placeholder="Enter Your Password"/> 
-                                </p>
                         
-                                <p> 
-                                    <a class="btn btn-defualt" id="loginbutton" href="info.html"  onclick="parseLogin()">Login</a> 
-								</p>
-                                <p class="change_link">
-									Not a member yet ?
-									<a href="#toregister" class="to_register">Join us</a>
-								</p>
-                            </form>
+                           <div id="login" class="animate-form">
+                                <form id="login-now"> 
+                                    <h1>Log in</h1> 
+                                    <p> 
+                                        <label for="username" class="uname"  Your email or username </label>
+                                        <input class="form-control" id="username" type="text" placeholder="Enter Your Username"/>
+                                    </p>
+                                    <p> 
+                                        <label for="password" class="youpasswd"> </label>
+                                        <input class="form-control" id="password" type="password"  placeholder="Enter Your Password"/> 
+                                    </p>
+
+                                    <p> 
+                                        <a class="btn btn-defualt" id="loginbutton" href="info.html"  onclick="parseLogin()">Login</a> 
+                                    </p>
+                                    <p class="change_link">
+                                        Not a member yet ?
+                                        <a href="#toregister" class="to_register">Join us</a>
+                                    </p>
+                                </form>
+                            
                         </div>
 
                         <div id="register" class="animate form">
