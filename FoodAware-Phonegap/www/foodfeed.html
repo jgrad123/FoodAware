@@ -35,6 +35,7 @@
     function initialize() {
       var feed = new google.feeds.Feed("http://www.health.com/health/food-recipes/feed");
     
+    
       feed.load(function(result) {
         if (!result.error) {
           var container = document.getElementById("feed");
