@@ -26,7 +26,6 @@
     <script src="https://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
     <script>
         Parse.initialize("jJo2iNOzfhTjx2gMGx5uEtTTKHfkTi7EsbPSWD8L", "nEYhgXGufiZSMXA0LwCeV2IcFhg0saTYPTlshkf4");
-
         function parseLogin() {
             Parse.User.logIn($("#username").val(), $("#password").val(), {
                 success: function(user) {
