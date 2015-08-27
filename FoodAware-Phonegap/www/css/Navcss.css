@@ -583,8 +583,13 @@ div.user-menu div.user-menu-content:not(.active){
 }
 
 
+<<<<<<< HEAD
 #login1 {
     size: 200px;
+=======
+#login-now {
+    size: 300px;
+>>>>>>> 6efeb6368667e90c652c284736c84fc791e2c24f
 }
 
 .animate-form {
