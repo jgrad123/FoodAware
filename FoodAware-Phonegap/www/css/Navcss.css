@@ -91,7 +91,7 @@ nav ul li:hover
     background-color: #F00;
     margin-right: 10px;
     width: 400px
-
+}
 #next
 {
     clear: both;
@@ -580,4 +580,17 @@ div.user-menu div.user-menu-content:not(.active){
     .user-image {
         max-height: 400px;
     }
+}
+
+
+#login1 {
+    size: 200px;
+}
+
+.animate-form {
+    size: 300px;
+}
+
+.change_link {
+    size: 300px;
 }
