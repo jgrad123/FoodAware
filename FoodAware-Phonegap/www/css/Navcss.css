@@ -18,12 +18,16 @@ color: white;
 }
 
 #feed {
-		    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-		}
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
 
-		#feed > div {
-		    position: relative;
-		}
+#feed img {
+    margin: -50px 0 0 0;
+}
+
+#feed > div {
+    position: relative;
+}
 
 
 nav ul 
@@ -603,6 +607,16 @@ div.user-menu div.user-menu-content:not(.active){
     padding:0 0 20px 0;
 }
 
+<<<<<<< HEAD
 #nav-bar1{
     padding: 0 0 30px 0;}
 
+=======
+#nav-bar1 {
+    padding: 0 0 30px 0;
+}
+
+#eat_this {
+    margin: 35px 0 25px 0px;
+}
+>>>>>>> 891f136bf8b3c067fee30b0e3a26e3d747d01c87
