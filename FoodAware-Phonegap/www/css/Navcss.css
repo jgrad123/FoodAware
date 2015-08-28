@@ -30,7 +30,7 @@ nav ul
   overflow:hidden;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   margin: 0;
   
 }
@@ -39,6 +39,7 @@ a
 {
     text-decoration:none;
     color: black;
+    
 }
 
 nav ul li 
@@ -583,13 +584,8 @@ div.user-menu div.user-menu-content:not(.active){
 }
 
 
-<<<<<<< HEAD
-#login1 {
-    size: 200px;
-=======
 #login-now {
     size: 300px;
->>>>>>> 6efeb6368667e90c652c284736c84fc791e2c24f
 }
 
 .animate-form {
@@ -599,3 +595,11 @@ div.user-menu div.user-menu-content:not(.active){
 .change_link {
     size: 300px;
 }
+
+#logo-main
+{
+    padding:0 0 20px 0;
+}
+
+#nav-bar1{
+    padding: 0 0 30px 0;}
