@@ -34,6 +34,8 @@ http://www.templatemo.com/free-website-templates/395-urbanic
         <body>
    <link href="https://cdn.playbuzz.com/content/bundles/71e3c33/game/multiplechoice/css" rel="stylesheet"/>
     <link href="https://cdn.playbuzz.com/content/bundles/71e3c33/game/play/css" rel="stylesheet"/>
+    <script src="//cdn.playbuzz.com/content/bundles/c053a93/game/play/js"></script>
+    <script src="//cdn.playbuzz.com/content/bundles/c053a93/game/multiplechoice/js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://cdn.playbuzz.com/content/bundles/71e3c33/libs/infra/js"></script>
@@ -133,7 +135,7 @@ http://www.templatemo.com/free-website-templates/395-urbanic
 
 </div>
 
-    <div class="image_sharing_bar">
+    <!-- <div class="image_sharing_bar">
         
         <div class="share_button_container" onclick="PBSharer.Facebook.shareImage('//www.playbuzz.com/austina11/foodaware', '//cdn.playbuzz.com/cdn/1b43e9e2-675e-41d4-aeb7-94e682c316b1/b9d82ca8-7409-4a56-84cd-299561d2661b.jpg')">
             <div class="facebook_img"></div>
@@ -147,13 +149,10 @@ http://www.templatemo.com/free-website-templates/395-urbanic
         <div id="tumblr_button_container" onclick="PBSharer.Tumblr.shareImage('//www.playbuzz.com/austina11/foodaware', '//cdn.playbuzz.com/cdn/1b43e9e2-675e-41d4-aeb7-94e682c316b1/b9d82ca8-7409-4a56-84cd-299561d2661b.jpg', 'What is the minimum temperature chicken should be cooked to?')">
             <div class="tumblr_img"></div>
         </div>
-        <!--
             <div id="googlePlus_button_container" onclick="googlePlusPhotoShare(document.location.href)">
             <div class="googlePlus_img"></div>
         </div>
-        -->
-
-    </div>
+    </div> -->
 
 
                 </div>
@@ -196,14 +195,14 @@ http://www.templatemo.com/free-website-templates/395-urbanic
 
                     <div class="answers_container">
                             <div class="answer_wrapper wrapper_w_images answer_image_box_3">
-                                <div class="answer selectable_answer answer_box_base answer_box_text_only" id="2a30a328-0228-4b8e-91cd-9dfb58de23e5">
+                                <div class="answer selectable_answer answer_box_base answer_box_text_only" id="wrong">
                                     <div class="answer_inner"></div>
 
                                     <div class="answer_header_no_img">100&#176;</div>
                                 </div>
                             </div>
                             <div class="answer_wrapper wrapper_w_images answer_image_box_3">
-                                <div class="answer selectable_answer answer_box_base answer_box_text_only" id="42d8910b-2cbd-4472-9129-cac9da854b8a">
+                                <div class="answer selectable_answer answer_box_base answer_box_text_only" id="wrong">
                                     <div class="answer_inner"></div>
 
                                     <div class="answer_header_no_img">250&#176;</div>
@@ -216,7 +215,6 @@ http://www.templatemo.com/free-website-templates/395-urbanic
                                     <div class="answer_header_no_img">160&#176;</div>
                                 </div>
                             </div>
-
 
                     </div> <!-- end of answers_container -->
 
@@ -333,7 +331,7 @@ http://www.templatemo.com/free-website-templates/395-urbanic
                                 </div>
                             </div>
                             <div class="answer_wrapper wrapper_w_images answer_image_box_2">
-                                <div class="answer selectable_answer answer_box_base answer_box_with_image" id="d6fa1400-f76f-4301-b8c3-709a4d1c3a23">
+                                <div class="answer selectable_answer answer_box_base answer_box_with_image" id="wrong">
                                     <div class="answer_inner"></div>
                                             <div class="answer_image_container" style="height: 282px;">
                                                 <div class="spinner_container"></div>
@@ -473,7 +471,7 @@ http://www.templatemo.com/free-website-templates/395-urbanic
                                 </div>
                             </div>
                             <div class="answer_wrapper wrapper_w_images answer_image_box_2">
-                                <div class="answer selectable_answer answer_box_base answer_box_with_image" id="d882f747-36f2-4883-8eaa-63786a380f5d">
+                                <div class="answer selectable_answer answer_box_base answer_box_with_image" id="wrong">
                                     <div class="answer_inner"></div>
                                             <div class="answer_image_container" style="height: 282px;">
                                                 <div class="spinner_container"></div>
@@ -713,5 +711,12 @@ http://www.templatemo.com/free-website-templates/395-urbanic
                     </div>
                 </div>
             </div> 
+            <style>
+
+            #wrong:hover {
+                background-color: red;
+            } 
+
+            </style>
        </body>
        </html>
