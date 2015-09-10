@@ -1,4 +1,4 @@
-var isCommonJS = typeof window == "undefined";
+Schedulevar isCommonJS = typeof window == "undefined";
 
 /**
  * Top level namespace for Jasmine, a lightweight JavaScript BDD/spec/testing framework.

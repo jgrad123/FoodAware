@@ -13,6 +13,7 @@ $(function() {
 		var pos;
 		var userCords;
 		var tempMarkerHolder = [];
+		var currentLocation;
 		
 		//Start geolocation
 		
@@ -29,7 +30,9 @@ $(function() {
 			}
 		
 			// Get the user's current position
-			navigator.geolocation.getCurrentPosition(success, error);
+			currentLocation = navigator.geolocation.getCurrentPosition(success, error);
+			
+		
 			//console.log(pos.latitude + " " + pos.longitude);
 			} else {
 				alert('Geolocation is not supported in your browser');
@@ -131,9 +134,12 @@ $(function() {
 											'<h3>' + results['Address'] + '</h3>' +
 											'<p>' + results['Products'].split(';') + '</p>' +
 											'<p>' + results['Schedule'] + '</p>' +
+											"<p><a href='https://maps.google.com/maps?saddr=11%20Times%20Square%20New%20York,%20NY%2010036" + "&daddr=" + results['Address'] + "@" + myLatlng + "&dirflg=b&lci=bike'>Directions</a>"+
 											'</div>'
 								});
-
+								
+								
+								
 								//put all lat long in array
 								allLatlng.push(myLatlng);
 								
