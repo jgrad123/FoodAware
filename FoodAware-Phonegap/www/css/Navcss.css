@@ -14,6 +14,7 @@ padding:40px 0;
 text-align:center;
 color: white;
 
+
     
 }
 
@@ -620,3 +621,11 @@ div.user-menu div.user-menu-content:not(.active){
     margin: 35px 0 25px 0px;
 }
 >>>>>>> 891f136bf8b3c067fee30b0e3a26e3d747d01c87
+
+#bcolor
+{
+    background-image: url("back.png");
+
+}
+
+

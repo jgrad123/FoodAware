@@ -304,10 +304,10 @@ html {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 1px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #ffffff;
+  background-image: url("bro.jpg");
 }
 
 input,
@@ -1758,7 +1758,7 @@ table th[class*="col-"] {
 .table > thead > .success > th,
 .table > tbody > .success > th,
 .table > tfoot > .success > th {
-  background-color: #dff0d8;
+  background-color: #;
 }
 
 .table-hover > tbody > tr > .success:hover,
